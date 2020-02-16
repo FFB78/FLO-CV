@@ -1,0 +1,441 @@
+/*RESET*/
+*{margin:0px;
+  padding:0px;
+}
+/*font*/
+font-family: 'Fjalla One', sans-serif;
+/*Width*/
+.widthall{width: all;}
+.widthauto{width: auto;}
+.width200{width: 200%;}
+.width100{width: 100%;}
+.widht50{width: 50%;}
+.widht33{width: 33%;}
+
+/*height*/
+.height100{height: 100%;}
+
+.widthbannier{width: auto;
+              height:all;}
+
+/*margine*/
+.margintop {margin-top: 10%;}
+
+/*padding*/
+.padding{padding: 5%;}
+
+/*Display Type*/
+.container{display: flex;}
+.dgrid {display: grid;}
+.dinline{display: inline;}
+
+
+/*Flex Direction*/
+.row{flex-direction: row;}
+.column{flex-direction: column;}
+
+/*Flex wrap*/
+.flexwrap{flex-wrap: wrap;}
+
+
+/* background Colors */
+.bcvertemeraude{background-color: #01D758;}
+.bcplantevert{background-color: #4FC031;}
+.bcgrisfoncer{background-color: #505151;}
+.bcgrisclair{background-color: #C9C9C1;}
+.bcwhite{background-color: white;}
+
+.justifyc{justify-content: center;}
+.justifysb{justify-content: space-between;}
+
+.dsflex{display: flex;
+        justify-content: space-between;}
+
+.textcenter{text-align: center;}
+.position{position: center;}
+
+/*Nav Bar CSS*/
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #2a623d;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+.bdradius{
+  border-radius: 50%;
+}
+
+
+
+/*Progress bar*/
+
+svg{
+  position: relative;
+  width: 150px;
+  height:150px;
+  z-index: 1000;
+}
+
+svg circle{
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #191919;
+  stroke-width: 10;
+  stroke-linecap: round;
+  transform: translate(5px,5px);
+}
+
+svg circle:nth-child(2){
+  stroke-dasharray: 220;
+  stroke-dashoffset:220;
+}
+
+/*change couleur cercle pourcentage*/
+.card-bis:nth-child(1) svg circle:nth-child(2){
+  stroke-dashoffset: calc(440 - ( 440*45 ) / 100);
+  stroke: #00ff43; 
+}
+.card-bis:nth-child(2) svg circle:nth-child(2){
+  stroke-dashoffset: calc(440 - ( 440*35 ) / 100);
+  stroke: #00ff43; 
+}
+.card-bis:nth-child(3) svg circle:nth-child(2){
+  stroke-dashoffset: calc(440 - ( 440*25 ) / 100);
+  stroke: #00ff43; 
+}
+
+/*fond couleur et position*/
+.card-bis{
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  align-items: center;
+}
+
+
+.card-bis .box{
+  position: relative;
+  width: 200px;
+  background: linear-gradient(0deg,white,white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  border-radius: 4px;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.5s;
+  border: solid 15px;
+  border-color: #2a623d;
+  border-radius: 10%;
+}
+
+/*animation quand on passe avec la souris*/
+.card-bis .box:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,.5);
+}
+
+.card-bis .box:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(225,225,225,.03);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/*couleur à l'interieur du cercle*/
+.percent{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 50px #000;
+  background: #2a623d;
+  z-index: 1000;
+}
+
+.percent .number{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%
+}
+
+/*fais apparaitre en blanc à l'intérieur du cercle*/
+.percent .number h2{
+  color: #777;
+  font-weight: 700;
+  font-size: 40px;
+  transition: 0.5s;
+}
+
+.card-bis:hover .percent .number h2{
+  color: #fff;
+  font-size: 60px;
+}
+
+.text{
+  position: relative;
+  color: #777;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+
+/*style parti cursus*/
+#xp-pro {
+    background-color: #FFFFFF;
+    text-align: center;
+    padding: 30px 0px;
+}
+
+.xp-bloc {
+    background-color: #FFFFFF;
+    width: 30vw;
+    padding: 15px;
+    margin: 20px;
+    text-align: left;
+    color: #FFFFFF;
+    transition: background-color 0.5s ease;
+}
+.xp-bloc:hover {
+    background-color: #2a623d;
+
+}
+.xp-bloc ul {
+    color: #c0bfbc;
+}
+.annee {
+    background-color: #2a623d;
+    color: white;
+    position: absolute;
+    margin-top: -30px;
+    margin-left: -30px;
+    width: 120px;
+    font-size: 22px;
+    padding: 5px;
+    text-align: center;
+}
+.titre-bloc {
+    text-align: right;
+    font-size: 25px;
+}
+.titre-bloc i {
+    margin: 15px;
+}
+.sous-titre-bloc {
+    text-align: right;
+    color: #999;
+}
+.nom-formation {
+    font-size: 20px;
+}
+
+/*Expérience pro1*/
+
+#portfolios {
+  background-color: #2a623d;
+  text-align: center;
+  padding: 30px 0px;
+  margin-top: 5%;
+}
+#portfolios img {
+ width: 20%;
+ height: 20%;
+ margin: 15px;
+ filter: saturate(0.1);
+ transition: filter 1s;
+}
+#portfolios img:hover {
+    filter: saturate(1);
+    cursor: pointer;
+   }
+
+.flex-row-bottom {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+    justify-content: center;
+    margin: 15px 10px;
+}
+
+.flex-row-center {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.text-cjust{
+  text-align: center;
+  content: justify;
+}
+
+.mp{
+  margin-top: 5%;
+}
+
+.mt7{
+  margin-top: 7%;
+}
+
+.mt2{
+  margin-top: 2%;
+}
+
+
+.hero-image {
+  background-image: url("../IMG/hero-bar.jpg");  The image used 
+  background-color: #cccccc;  Used if the image is unavailable 
+  height: 700px; You must set a specified height 
+  background-position: center;  Center the image 
+  background-repeat: no-repeat;  Do not repeat the image 
+  background-size: cover;  
+}
+
+.textapparence{
+  background-color: rgba(0, 0, 0, 0.5);}
+
+.taillefixe{
+  height: 66%;
+  width: 66%;
+}
+
+.taillephoto{
+  height: 300px;
+  width: 300px;
+}
+
+.placementcentre{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+
+.shadow{
+  border: solid;
+  border-color: #2a623d;
+}
+
+.bordershadow{
+  box-shadow: 12px 12px 2px 1px #2a623d;
+  border: solid;
+  border-color: #2a623d;
+}
+
+
+/*css expérience bis*/
+.playing-card{
+  background:transparent;
+  width: 240px;
+  height: 340px;
+  display: 
+  margin: 10px;
+  perspective: 1000px;
+  border: 1px solid #000;
+}
+
+
+/*element du formulaire*/
+form {
+  /* Uniquement centrer le formulaire sur la page */
+  margin: 0 auto;
+  width: 400px;
+  /* Encadré pour voir les limites du formulaire */
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+}
+
+form div + div {
+  margin-top: 1em;
+}
+
+label {
+  /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+}
+
+input, textarea {
+  /* Pour s'assurer que tous les champs texte ont la même police.
+     Par défaut, les textarea ont une police monospace */
+  font: 1em sans-serif;
+
+  /* Pour que tous les champs texte aient la même dimension */
+  width: 300px;
+  box-sizing: border-box;
+
+  /* Pour harmoniser le look & feel des bordures des champs texte */
+  border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+  /* Pour souligner légèrement les éléments actifs */
+  border-color: #000;
+}
+
+textarea {
+  /* Pour aligner les champs texte multi‑ligne avec leur étiquette */
+  vertical-align: top;
+
+  /* Pour donner assez de place pour écrire du texte */
+  height: 5em;
+}
+
+.button {
+  /* Pour placer le bouton à la même position que les champs texte */
+  padding-left: 90px; /* même taille que les étiquettes */
+}
+
+button {
+  /* Cette marge supplémentaire représente grosso modo le même espace que celui
+     entre les étiquettes et les champs texte */
+  margin-left: .5em;
+}
